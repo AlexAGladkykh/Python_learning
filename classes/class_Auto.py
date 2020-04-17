@@ -69,12 +69,11 @@ class Auto:
             self.a_max_mass = data['a.max.m'] 
         
     
-    # def save_f(self):
-    #     info = []
-    #     show_info()
-    #     with open("autos.txt", "a") as f:
-    #         f.write(info)
-    #         f.close()
+    def save_f(self):
+        info = self.show_info()
+        with open("autos.txt", "a") as f:
+            f.write(info)
+            f.close()
 
 
 # fabia = Auto()

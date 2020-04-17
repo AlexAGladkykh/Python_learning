@@ -8,10 +8,10 @@ class Man:
         self.age = None
 
     def input_info(self):
-        self.f_name = input("Input First Name: ")
-        self.m_name = input("Input Middle Name: ")
-        self.l_name = input("Input Last Name: ")
-        self.age = input("Input Age: ")
+        self.f_name = input("Введите имя: ")
+        self.m_name = input("Введите отчество: ")
+        self.l_name = input("Введите фамилию: ")
+        self.age = input("Введите возраст: ")
 
     def show_info(self):
         return "First name: {}\n" \

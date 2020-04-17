@@ -1,0 +1,14 @@
+Registration number: q
+Year of manufacture: q
+Ovner surname: q
+Ovner name: q
+Ovner adress: q
+Make: qq
+Type: q
+Commercial description: q
+VIN: q
+Maximum mass: q
+Vehicle category: q
+Capacity: q
+Color : q
+Number of seats: q
