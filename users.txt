@@ -1,1 +1,1 @@
-{"f.name": "q", "m.name": "q", "l.name": "q", "age": "q"}
+{"login": "q", "password": "q", "email": "q"}

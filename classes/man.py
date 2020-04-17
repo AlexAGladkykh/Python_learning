@@ -13,7 +13,7 @@ class Man:
         self.l_name = input("Input Last Name: ")
         self.age = input("Input Age: ")
 
-    def man_info(self):
+    def show_info(self):
         return "First name: {}\n" \
                 "Middle name: {}\n"\
                 "Last name: {}\n" \
@@ -26,7 +26,7 @@ class Man:
         data['m.name']=self.m_name
         data['l.name']=self.l_name
         data['age']=self.age
-        with open("users.txt", "w") as f:
+        with open("users.txt", "a") as f:
             json.dump(data, f)
     
     def load(self):
@@ -46,6 +46,7 @@ class User(Man):
         self.conf_password=None
         self.email = None
         self.phone = None
+        super().__init__(self)
 
     def log(self):
         login = input("Enter your login: ")
@@ -65,22 +66,34 @@ class User(Man):
         self.password = input("Input your password: ")
         self.conf_password=input("Confirm your password: ")
         self.email = input("Input your email: ")
+        super().input_info()
         with open("users.txt", "w") as f:
             data={}
             data['login']=self.login
             data['password']=self.password
             data['email']=self.email
             json.dump(data, f)
-    
-    def user_info(self):
-        pass
 
-user = User()
-user.reg()
-user.log()
-user.input_info()
-print(user.man_info())
-user.save()
+class MaxUser(User):
+    
+    def __init__(self):
+        self.gender = None
+        super().__init__(self)
+
+    def reg(self):
+        super().reg()
+        self.gender=input("Enter your gender: ")
+
+    
+    def show_info(self):
+        return  "User: {}\n"\
+                "First name: {}\n" \
+                "Middle name: {}\n"\
+                "Last name: {}\n" \
+                "Gender: {}\n"\
+                "Age : {}\n"\
+                .format(self.login, self.f_name,self.m_name,self.l_name, self.gender, self.age)    
+    
 
 
 
